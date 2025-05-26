@@ -1,0 +1,43 @@
+name: deploy
+
+on:
+  push:
+
+# Permission to read, write to repo and github pages
+permissions:
+  contents: read
+  pages: write  
+  id-token: write
+
+jobs:
+  
+  deploy:
+    environment:
+      name: github-pages 
+      url: ${{ steps.deployment.outputs.page_url }} 
+    runs-on: ubuntu-latest 
+    needs: build 
+
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v4
+
+    # configure gitHub pages environment
+    - name: Setup Pages 
+      uses: actions/configure-pages@v5
+
+    # get the artifact created from build job
+    - name: Download build artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: github-pages 
+        path: ./out
+
+    - name: Upload Pages artifact 
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./out
+
+    - name: Deploy to GitHub Pages 
+      id: deployment
+      uses: actions/deploy-pages@v4 
