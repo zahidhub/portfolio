@@ -1,0 +1,75 @@
+name: build-and-deploy
+
+on:
+  push:
+  create:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  pages: write  
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+       
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+    
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (static export)
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: out
+
+
+  deploy:
+    if: "github.ref == 'refs/heads/main'"
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages 
+      url: ${{ steps.deployment.outputs.page_url }} 
+
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v4
+
+      - name: Setup Pages 
+        uses: actions/configure-pages@v5
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: ./out
+
+
+      - name: Upload Pages artifact 
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+      - name: Deploy to GitHub Pages 
+        id: deployment
+        uses: actions/deploy-pages@v4
