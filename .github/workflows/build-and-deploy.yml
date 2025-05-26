@@ -39,8 +39,9 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages 
+          name: build-output
           path: out
+
 
   deploy:
     needs: build
@@ -59,8 +60,9 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
-          name: github-pages 
+          name: build-output
           path: ./out
+
 
       - name: Upload Pages artifact 
         uses: actions/upload-pages-artifact@v3
