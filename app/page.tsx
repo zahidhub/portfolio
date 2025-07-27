@@ -5,11 +5,6 @@ import { Header } from './components/header';
 import { Hero } from './components/hero';
 import { AboutMe } from './components/aboutMe';
 
-// for merging Tailwind classes
-function cn(...inputs: (string | undefined | null | false)[]): string {
-  return inputs.filter(Boolean).join(' ');
-}
-
 export default function PortfolioPage() {
   
   const portfolioData = {
