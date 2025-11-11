@@ -4,13 +4,14 @@ import React from 'react';
 import { Header } from './components/header';
 import { Hero } from './components/hero';
 import { AboutMe } from './components/aboutMe';
+import ProjectsSection from './components/projects';
 
 export default function PortfolioPage() {
   
   const portfolioData = {
     name: "Hasan Zahid",
     title: "Software Engineering Student at CHALMERS | GU",
-    bio: "Software Engineering student at CHALMERS | GU with a strong interest in the intersection of software and hardware. I am passionate about building innovative tech solutions and driven by a long term goal: to make a meaningful mark in the tech world by creating something truly impactful."
+    bio: "Software Engineering student at CHALMERS | GU with interest in the integration of software and hardware. Currently, I am into software development, and constantly trying to improve myself in low level language and agile software development practices (Git, CI/CD). My motto is building innovative tech solutions and driven by a long term goal: to make a meaningful mark in the tech world by creating something truly impactful."
   };
 
   return (
@@ -18,6 +19,7 @@ export default function PortfolioPage() {
       <Header name={portfolioData.name} />
       <Hero name={portfolioData.name} title= {portfolioData.title} />
       <AboutMe bio={portfolioData.bio}/>
+      <ProjectsSection />
     </div>
   );
 }
