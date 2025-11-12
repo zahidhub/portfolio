@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 // Defining prop
 interface HeroProps {
@@ -40,9 +41,23 @@ export const Hero: React.FC<HeroProps> = ({ name, title }) => {
           </p>
 
           {/* button to navigate to projects */}
-          <Button size="lg" onClick={handleViewWorkClick}>
-            View Projects
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Button size="lg" onClick={handleViewWorkClick}>
+              View Projects
+            </Button>
+
+            {/* Same style, opens PDF in new tab */}
+            <Button size="lg" asChild>
+              <Link
+                href="/Hasan-Zahid-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open CV PDF in a new tab"
+              >
+                View CV .pdf
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
     </main>
