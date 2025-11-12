@@ -13,10 +13,9 @@ export const Header: React.FC<HeaderProps> = ({ name }) => {
         <Link
           href="/"
           aria-label="Go to landing page"
-          className="text-2xl md:text-3xl font-bold text-blue-950">
-          
+          className="text-2xl md:text-3xl font-bold text-foreground hover:text-sky-600 dark:hover:text-sky-400"
+        >
           {name}
-        
         </Link>
         <nav className="space-x-4">
           <a href="#about" className="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">

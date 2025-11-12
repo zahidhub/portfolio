@@ -83,7 +83,7 @@ export default function ProjectsSection() {
               className="bg-white dark:bg-slate-850 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
             >
               <CardHeader>
-                <CardTitle className="text-sky-700 dark:text-sky-500">
+                <CardTitle className="text-sky-800 dark:text-sky-800">
                   {project.title}
                 </CardTitle>
                 <CardDescription>{project.description}</CardDescription>
@@ -117,12 +117,13 @@ export default function ProjectsSection() {
                   </Button>
                 )}
                 {project.repoLink !== "#" && (
-                  <Button variant="outline" asChild>
-                    <a
-                      href={project.repoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <Button
+                     variant="outline"
+                     asChild
+                     className="text-sky-800 border-sky-600 hover:bg-sky-600/10
+                                dark:text-sky-800 dark:border-sky-600 dark:hover:bg-sky-400/10"
                     >
+                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
                       View Repo
                     </a>
                   </Button>
