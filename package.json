@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
+    "postexport": "sh -c 'mkdir -p out && : > out/.nojekyll'",
     "predeploy": "next build",
     "deploy": "gh-pages -d out"
   },
