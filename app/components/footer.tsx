@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ name, contact }) => {
         <div className="max-w-xl mx-auto text-center px-6 py-12 md:py-16">
           <h3 className="text-3xl md:text-4xl font-semibold mb-6">Get In Touch</h3>
           <p className="text-md md:text-lg text-slate-700 dark:text-slate-300 mb-8">
-            I'm always open to discussing new projects, creative ideas or opportunities to be part of something amazing. Feel free to reach out!
+            I am always open to discussing new projects, creative ideas or opportunities to be part of something amazing. Feel free to reach out!
           </p>
 
           <div className="flex justify-center space-x-6">
