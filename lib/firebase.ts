@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAnalytics, isSupported } from "firebase/analytics";
 
-// Your web app's Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -23,6 +23,8 @@ if (typeof window !== 'undefined') {
         if (yes) {
             analytics = getAnalytics(app);
         }
+    }).catch((err) => {
+        console.warn("Firebase Analytics not supported or failed to initialize:", err);
     });
 }
 

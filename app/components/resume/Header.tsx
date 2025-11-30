@@ -6,12 +6,12 @@ export const Header = () => {
     const { header } = resumeData;
 
     return (
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-            <div className="space-y-1.5">
+        <header className="flex flex-row justify-between items-start mb-8 gap-4">
+            <div className="space-y-1.5 flex-1">
                 <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                     {header.name}
                 </h1>
-                <p className="text-lg text-slate-500 dark:text-slate-400 font-medium">
+                <p className="text-sm md:text-lg text-slate-500 dark:text-slate-400 font-medium">
                     {header.title}
                 </p>
                 <div className="flex flex-wrap gap-3 text-sm text-slate-500 dark:text-slate-400 mt-2">
@@ -37,6 +37,8 @@ export const Header = () => {
                         <a
                             key={social.name}
                             href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="p-1.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-300 transition-colors"
                             title={social.name}
                         >
@@ -47,7 +49,7 @@ export const Header = () => {
             </div>
 
             {/* Avatar */}
-            <div className="hidden md:block w-28 h-28 rounded-full bg-slate-200 dark:bg-slate-800 flex-shrink-0 border-2 border-slate-100 dark:border-slate-700 overflow-hidden relative">
+            <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-slate-200 dark:bg-slate-800 flex-shrink-0 border-2 border-slate-100 dark:border-slate-700 overflow-hidden relative">
                 {header.avatarUrl ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
