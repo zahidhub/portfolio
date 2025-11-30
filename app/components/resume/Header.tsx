@@ -48,11 +48,9 @@ export const Header = () => {
 
             {/* Avatar */}
             <div className="hidden md:block w-28 h-28 rounded-full bg-slate-200 dark:bg-slate-800 flex-shrink-0 border-2 border-slate-100 dark:border-slate-700 overflow-hidden relative">
-                {/* @ts-ignore */}
                 {header.avatarUrl ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
-                        /* @ts-ignore */
                         src={header.avatarUrl}
                         alt={header.name}
                         className="w-full h-full object-cover"
