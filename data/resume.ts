@@ -17,7 +17,7 @@ export const resumeData = {
             degree: "BSc in Software Engineering and Management",
             school: "CHALMERS | Gothenburg University",
             period: "Aug 2023 - Present",
-            description: "hellowew"
+            description: "Thesis: Seasonal and Weather OOD Robustness Analysis. Collaboration with <b>Volvo Cars</b>"
         }
     ],
     experience: [
@@ -53,36 +53,43 @@ export const resumeData = {
         {
             name: "SpaceMonkey",
             tech: "Python, Django REST, ML",
+            link: "https://github.com/zahidhub/spacemonkeynasa",
             description: "NASA App Challenge. Built a ML powered prediction system using NASA Kepler data; implemented real time inference, and Agile teamwork across a 6 member team."
         },
         {
             name: "EnviroBaby",
             tech: "C, Arduino, MQTT, JavaFX",
+            link: "https://github.com/zahidhub/EnviroBaby",
             description: "Built a microcontroller based IoT monitoring system; integrated with a desktop client via pub/sub architecture. Applied CI/CD, Git workflows, and Agile methods."
         },
         {
             name: "ShadowRadar",
             tech: "C, Signal Processing",
+            link: "https://github.com/zahidhub/ShadowRadar",
             description: "Simulated a radar detection system focusing on signal processing and object tracking; emphasized real time logic and scalability."
         },
         {
             name: "Ghost-Comm",
             tech: "C, Docker, Security",
+            link: "https://github.com/zahidhub/Ghost-Comm",
             description: "Built a containerized Morse code encryption/decryption service; applied secure message protocols and modular command line tooling."
         },
         {
             name: "Slithery Snake",
             tech: "JavaFX, OOP",
+            link: "https://github.com/zahidhub/SlitherySnake",
             description: "Designed an object oriented snake game with modular architecture and clean code practices; project tracking using Kanban boards."
         },
         {
             name: "FlappyPole",
             tech: "Godot, GDScript",
+            link: "https://github.com/zahidhub/Flappy-Pole",
             description: "Developed an arcade style game with modular logic and collision handling; reinforced pedagogy through code clarity and peer feedback."
         },
         {
             name: "Egglu",
             tech: "React, JavaScript",
+            link: "https://github.com/zahidhub/Egglu",
             description: "Created an interactive egg boiling assistant; built responsive UI with custom CSS, improved user experience, and managed iterations through Agile practices."
         }
     ],

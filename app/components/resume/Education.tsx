@@ -13,9 +13,10 @@ export const Education = () => (
                     <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{edu.school}</div>
                     <div className="text-xs text-blue-600 dark:text-blue-400 font-medium mt-1">{edu.period}</div>
                     {edu.description && (
-                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
-                            {edu.description}
-                        </p>
+                        <p
+                            className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed"
+                            dangerouslySetInnerHTML={{ __html: edu.description }}
+                        />
                     )}
                 </div>
             ))}
