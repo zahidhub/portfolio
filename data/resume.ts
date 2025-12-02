@@ -27,12 +27,12 @@ export const resumeData = {
                 {
                     role: "Project Supervisor",
                     period: "Nov 2025 - Present",
-                    description: "DAT295 Autonomous and cooperative vehicular systems."
+                    description: "(M.Sc Course) - DAT295 Autonomous and cooperative vehicular systems."
                 },
                 {
                     role: "Teaching Assistant",
                     period: "Aug 2025 - Nov 2025",
-                    description: "DAT257 Agile software project management."
+                    description: "(M.Sc Course) - DAT257 Agile software project management."
                 }
             ]
         },
