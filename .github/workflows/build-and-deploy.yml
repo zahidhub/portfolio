@@ -13,13 +13,22 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Switch this to your server
+    runs-on: self-hosted
 
     strategy:
       matrix:
         node-version: [22.x]
        
     steps:
+      # Print hostname to prove it's your server in the logs
+      - name: panicgod CI/CD Runner
+        run: echo "Building on $(hostname) with $(grep -c ^processor /proc/cpuinfo) CPU cores"
+      
+      # Clean the folder so old files don't break the new build
+      - name: Clean Workspace
+        run: rm -rf ./* || true
+      
       - name: Checkout
         uses: actions/checkout@v4
 
