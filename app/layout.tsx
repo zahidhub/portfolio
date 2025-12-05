@@ -13,9 +13,53 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// METADATA SECTION
 export const metadata: Metadata = {
-  title: "I am HasanZahid",
-  description: "Portfolio of Hasan Zahid",
+  metadataBase: new URL('https://hasanzahid.eu'),
+  title: {
+    default: "Hasan Zahid | Software Engineer",
+    template: "%s | Hasan Zahid"
+  },
+  description: "Portfolio of Hasan Zahid (Zahid Hasan), a Software Engineering student at Chalmers | GU specializing in low-level programming, Agile, and IoT solutions.",
+  keywords: [
+    "Hasan Zahid", 
+    "Zahid Hasan", 
+    "HasanZahid", 
+    "hasanzahid.eu", 
+    "Software Engineer", 
+    "Chalmers", 
+    "Gothenburg", 
+    "Web Developer"
+  ],
+  authors: [{ name: "Hasan Zahid", url: "https://hasanzahid.eu" }],
+  creator: "Hasan Zahid",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://hasanzahid.eu",
+    title: "Hasan Zahid | Software Engineer",
+    description: "Portfolio of Hasan Zahid (Zahid Hasan). View my projects, skills, and experience in Software Engineering.",
+    siteName: "Hasan Zahid Portfolio",
+    images: [
+      {
+        url: "/Profile-Photo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hasan Zahid Profile",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: '/favicon.ico',
   },
