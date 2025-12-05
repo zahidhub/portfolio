@@ -78,7 +78,7 @@ export default function Resume() {
             {/* Navbar / Controls */}
             <div className="fixed top-0 right-0 p-4 flex gap-2 z-50 print:hidden">
                 <a
-                    href="/portfolio/Hasan-Zahid-Resume.pdf"
+                    href="/Hasan-Zahid-Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-white dark:bg-slate-800 shadow-md hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-all inline-flex items-center justify-center"

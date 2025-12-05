@@ -2,7 +2,7 @@ export const resumeData = {
     header: {
         name: "Hasan Zahid",
         title: "Project Supervisor and Software Engineering Student at Chalmers | GU",
-        avatarUrl: "/portfolio/Profile-Photo.jpg",
+        avatarUrl: "/Profile-Photo.jpg",
         location: "Gothenburg, Sweden",
         email: "zahiduniversity@gmail.com",
         phone: "+46760737197",
