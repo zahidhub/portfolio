@@ -75,6 +75,15 @@ jobs:
           name: build-output
           path: ./out
 
+      - name: Clean FTP Server
+        run: |
+          npm install basic-ftp
+          node scripts/clean-ftp.js
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -83,3 +92,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: ./
+          clean: false
