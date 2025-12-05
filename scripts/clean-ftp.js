@@ -23,6 +23,15 @@ async function clean() {
             console.log("Could not remove _next directory (might not exist):", err.message)
         }
 
+        // Try to remove the state file to force a fresh sync
+        try {
+            console.log("Attempting to remove .ftp-deploy-sync-state.json...")
+            await client.remove(".ftp-deploy-sync-state.json")
+            console.log("Successfully removed .ftp-deploy-sync-state.json")
+        } catch (err) {
+            console.log("Could not remove state file (might not exist):", err.message)
+        }
+
     } catch (err) {
         console.log("FTP Error:", err)
         process.exit(1)
