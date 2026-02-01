@@ -25,8 +25,18 @@ export const resumeData = {
             company: "Chalmers University of Technology",
             roles: [
                 {
+                    role: "Teaching Assistant",
+                    period: "Jan 2026 - Present",
+                    description: "(B.Sc Course) - DATX11/DIT561 B.Sc. Thesis Project: Automation of Scaled Vehicles"
+                },
+                {
+                    role: "Teaching Assistant",
+                    period: "Jan 2026 - Present",
+                    description: "(B.Sc Course) - DAT335 / DIT034 Data Management"
+                },
+                {
                     role: "Project Supervisor",
-                    period: "Nov 2025 - Present",
+                    period: "Nov 2025 - Jan 2026",
                     description: "(M.Sc Course) - DAT295 Autonomous and cooperative vehicular systems."
                 },
                 {
