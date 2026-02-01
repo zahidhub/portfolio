@@ -2,9 +2,12 @@ name: build-and-deploy
 
 on:
   push:
+  workflow_dispatch: # Allows manual trigger from GitHub UI
   create:
   release:
     types: [published]
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
 
 permissions:
   contents: read
@@ -44,6 +47,7 @@ jobs:
 
       - name: Build (static export)
         env:
+          GITHUB_TOKEN: ${{ secrets.PORTFOLIO_GITHUB_TOKEN }}
           NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}
           NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ secrets.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
           NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
