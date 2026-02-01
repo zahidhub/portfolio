@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   },
   description: "Portfolio of Hasan Zahid (Zahid Hasan), a Software Engineering student at Chalmers | GU specializing in low-level programming, Agile, and IoT solutions.",
   keywords: [
-    "Hasan Zahid", 
-    "Zahid Hasan", 
-    "HasanZahid", 
-    "hasanzahid.eu", 
-    "Software Engineer", 
-    "Chalmers", 
-    "Gothenburg", 
+    "Hasan Zahid",
+    "Zahid Hasan",
+    "HasanZahid",
+    "hasanzahid.eu",
+    "Software Engineer",
+    "Chalmers",
+    "Gothenburg",
     "Web Developer"
   ],
   authors: [{ name: "Hasan Zahid", url: "https://hasanzahid.eu" }],
@@ -61,7 +61,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
