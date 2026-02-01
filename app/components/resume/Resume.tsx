@@ -13,8 +13,13 @@ import { Education } from './Education';
 import { Experience } from './Experience';
 import { Projects } from './Projects';
 import { Honors } from './Honors';
+import { GithubActivity, ContributionData } from './GithubActivity';
 
-export default function Resume() {
+interface ResumeProps {
+    githubData: ContributionData | null;
+}
+
+export default function Resume({ githubData }: ResumeProps) {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [clickCount, setClickCount] = useState(0);
@@ -46,7 +51,7 @@ export default function Resume() {
     }, []);
 
     if (!mounted) {
-        return null;
+        return null; // Prevent hydration mismatch
     }
 
     const toggleTheme = () => {
@@ -108,6 +113,7 @@ export default function Resume() {
                         <div className="md:col-span-1 space-y-8 order-2 md:order-1">
                             <Skills />
                             <Honors />
+                            <GithubActivity data={githubData} />
                         </div>
                         <div className="md:col-span-2 space-y-8 order-1 md:order-2">
                             <Education />
