@@ -1,7 +1,7 @@
 export const resumeData = {
     header: {
         name: "Hasan Zahid",
-        title: "TA for DATX11 & DAT335 and Software Engineering Student at CHALMERS | GU",
+        title: "TA for DATX11 & DIT637 and Software Engineering Student at CHALMERS | GU",
         avatarUrl: "/Profile-Photo.jpg",
         location: "Gothenburg, Sweden",
         email: "zahiduniversity@gmail.com",
@@ -31,7 +31,12 @@ export const resumeData = {
                 },
                 {
                     role: "Teaching Assistant",
-                    period: "Jan 2026 - Present",
+                    period: "Mar 2026 - Present",
+                    description: "(B.Sc Course) - DIT637 Project: Data-Driven Software Engineering for Cyber Physical Systems"
+                },
+                {
+                    role: "Teaching Assistant",
+                    period: "Jan 2026 - Mar 2026",
                     description: "(B.Sc Course) - DAT335 / DIT034 Data Management"
                 },
                 {
