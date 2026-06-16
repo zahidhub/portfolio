@@ -7,31 +7,37 @@ export const resumeData = {
         email: "zahiduniversity@gmail.com",
         phone: "+46760737197",
         socials: [
-            { name: "LinkedIn", url: "https://www.linkedin.com/in/hasan-zahid-292541244/", icon: "Linkedin" },
+            { name: "LinkedIn", url: "https://www.linkedin.com/in/meet-hasan-zahid/", icon: "Linkedin" },
             { name: "GitHub", url: "https://github.com/zahidhub", icon: "Github" }
         ]
     },
-    about: "Software Engineering student at CHALMERS | GU with interest in the integration of software and hardware. Currently, I am into software development, and constantly trying to improve myself in low level language and agile software development practices (Git, CI/CD). My motto is building innovative tech solutions and driven by a long term goal: to make a meaningful mark in the tech world by creating something truly impactful.",
+    about: "I have an interest in the integration of software and hardware. Currently, I am into software development, and constantly trying to improve myself in low level language and agile software development practices (Git, CI/CD). My motto is building innovative tech solutions and driven by a long term goal: to make a meaningful mark in the tech world by creating something truly impactful.",
     education: [
         {
             degree: "BSc in Software Engineering and Management",
             school: "CHALMERS | Gothenburg University",
-            period: "Aug 2023 - Present",
+            period: "Aug 2023 - Jun 2026",
             description: "Thesis: Seasonal and Weather OOD Robustness Analysis. Collaboration with <b>Volvo Cars</b>"
         }
     ],
     experience: [
         {
+            role: "Full-stack Intern",
+            company: "ASSA ABLOY Entrance Systems",
+            period: "Aug 2025 - Present",
+            description: "Develop full-stack web applications using React, Node.js, and FastAPI, integrating Python and MongoDB backends while leveraging Docker, DevOps principles, and automated security/quality analysis (SonarQube, Snyk) within CI/CD pipelines to streamline engineering workflows."
+        },
+        {
             company: "Chalmers University of Technology",
             roles: [
                 {
                     role: "Teaching Assistant",
-                    period: "Jan 2026 - Present",
+                    period: "Jan 2026 - Jun 2026",
                     description: "(B.Sc Course) - DATX11/DIT561 B.Sc. Thesis Project: Automation of Scaled Vehicles"
                 },
                 {
                     role: "Teaching Assistant",
-                    period: "Mar 2026 - Present",
+                    period: "Mar 2026 - Jun 2026",
                     description: "(B.Sc Course) - DIT637 Project: Data-Driven Software Engineering for Cyber Physical Systems"
                 },
                 {
@@ -54,7 +60,7 @@ export const resumeData = {
         {
             role: "Board Member",
             company: "SKIP (Student Association of Knowledge in Informatics and Programming)",
-            period: "Aug 2025 - Present",
+            period: "Aug 2025 - Jun 2026",
             description: ""
         },
         {
