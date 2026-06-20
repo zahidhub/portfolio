@@ -1,7 +1,7 @@
 export const resumeData = {
     header: {
         name: "Hasan Zahid",
-        title: "TA for DATX11 & DIT637 and Software Engineering Student at CHALMERS | GU",
+        title: "Full-stack Intern @ASSAABLOYEntranceSystems and Software Engineering Student at CHALMERS | GU",
         avatarUrl: "/Profile-Photo.jpg",
         location: "Gothenburg, Sweden",
         email: "zahiduniversity@gmail.com",
